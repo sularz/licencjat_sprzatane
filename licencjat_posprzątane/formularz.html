@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formularz</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	
+	<!-- Another -->
+    <link rel="stylesheet" type="text/css" href="css/podstronastyle.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/bddfd6db8e.js" crossorigin="anonymous"></script>
+	<script src="../../js/ios-orientationchange-fix.min.js"></script>
+
+</head>
+<body>
+
+    <p>
+        <button class="btn btn-light" aria-expanded="false" aria-controls="instrukcja" data-target="#instrukcja" data-toggle="collapse">Instrukcja obsługi formularza</button>
+    </p>
+    <p class="collapse card card-body text-center" id="instrukcja">
+            Zapraszam Cię na wspólny spacer po Krakowie. Pokażę Ci miejsca, których nie znajdziesz w przewodnikach. <br>
+                W formularzu podaj proszę email, dzięki któremu będę mogła się z Tobą skontaktować. W wiadomości zamieść takie informacje jak: <br><br>
+                1. <b>liczba osób</b>, które będą uczestniczyć w spacerze<br>
+                2. <b>trasy</b>, które chciał(a)byś przejść<br>
+                3. <b>termin</b>, w którym chciał(a)byś przyjechać do Krakowa<br><br>
+            Jeżeli chcesz poznać Kraków oczami osoby, o której nie wspomniałam na stronie, daj znać. Postaram się przygotować specjalnie dla Ciebie taki spacer.
+    </p>
+    <!--
+    <div style=" margin-left:3vw; margin-top:2vw; margin-right:3vw;  padding-left: 3vw; padding-right: 3vw; ">
+        <p style="text-align: center;">Zapraszam Cię na wspólny spacer po Krakowie. Pokażę Ci miejsca, których nie znajdziesz w przewodnikach. <br>
+            W formularzu podaj proszę email, dzięki któremu będę mogła się z Tobą skontaktować. W wiadomości zamieść takie informacje jak: </p>
+        <ul style=" display:block; width: 70%; margin: auto;">
+            <li><b>liczba osób</b>, które będą uczestniczyć w spacerze</li>
+            <li><b>trasy</b>, które chciał(a)byś przejść</li>
+            <li><b>termin</b>, w którym chciał(a)byś przyjechać do Krakowa</li>
+        </ul><br>
+        <p style="text-align: center;">Jeżeli chcesz poznać Kraków oczami osoby, o której nie wspomniałam na stronie, daj znać. Postaram się przygotować specjalnie dla Ciebie taki spacer.  </p>
+    </div>-->
+
+    <form action="formularz.php" method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+          <small id="emailHelp" class="form-text text-muted">Twój email trafi tylko w moje ręcę.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Wiadomość</label>
+            <textarea class="form-control" name="content" rows="5" ></textarea>
+        </div>
+        <div class="text-center">
+            <button type="submit" name="submit" class="btn btn-primary">Wyślij</button>
+        </div>
+      </form>
+
+      <a href="index.html" class="homebtn"><i class="fas fa-home"></i></a>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+          $('.collapse').on('show.bs.collapse', function () {
+            $('.collapse.in').each(function(){
+                $(this).collapse('hide');
+            });
+          });	
+      </script>
+      <script>
+          $(document).click(function(e) {
+          if (!$(e.target).is('.panel-body')) {
+              $('.collapse').collapse('hide');	    
+          }
+      });
+      </script>
+</body>
+</html>

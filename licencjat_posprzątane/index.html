@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Strona główna</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	
+	<!-- Another -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="../../js/ios-orientationchange-fix.min.js"></script>
+
+</head>
+<body>
+	
+	<p>
+		<button class="btn btn-light" aria-expanded="false" aria-controls="instrukcja" data-target="#instrukcja" data-toggle="collapse">Instrukcja obsługi kolażu</button>
+		<button class="btn btn-light" aria-expanded="false" aria-controls="projektantka" data-target="#projektantka" data-toggle="collapse">O projektantce</button>
+		<button class="btn btn-light" aria-expanded="false" aria-controls="projekt" data-target="#projekt" data-toggle="collapse">O projekcie</button>
+	</p>
+
+	<p class="collapse card card-body text-center" id="instrukcja">	  
+			
+		1. Nie lubisz instrukcji? Szanuję to! Przejdź do ostatniego punktu.<br><br>
+		2. Drugim krokiem w obsłudze kolażu jest zapoznanie się z jego elementami. Po najechaniu myszką na każdy klikalny fragment pojawia się podpis. Wyświetlony napis to nazwisko przypisane odpowiednio do osoby. 
+		<br><br>
+		3. Trzecim krokiem jest wybór artysty i kliknięcie w jego portret.
+		<br><br>
+		4. Poniżej znajdują się wszystkie trasy. Wybierz dowolną i kliknij w nią.
+		<br><br>
+			<a href="tischner.html" class="btn btn-light" role="button">Tischner</a>
+			<a href="conrad.html" class="btn btn-light" role="button">Conrad</a>
+			<a href="szymborska.html" class="btn btn-light" role="button">Szymborska</a>
+			<a href="stwosz.html" class="btn btn-light" role="button">Stwosz</a>
+			<a href="kantor.html" class="btn btn-light" role="button">Kantor</a>
+	</p>
+	<p class="collapse card card-body text-center" id="projektantka">
+		Cześć, mam na imię Karolina i jestem studentką EPI. Po trzech latach nauki myślę, że mogę przedstawić się również jako programistka.
+		<br>Na studiach poza uczeniem się PHP odkryłam grafikę, zgłębiłam miłość do animacji i przestałam bać się sprzętu firmy Cisco.
+		<br>Lubię wycinać, rysować, kleić, malować, pachnieć farbami, oglądać animacje i programować w backendzie.
+	</p> 
+	<p class="collapse card card-body text-center" id="projekt">
+		Przedstawiam pięć pomysłów na spacery po Krakowie śladami znanych osób, które mieszkały w tym mieście. <br> Dzięki prezentowanym wycieczkom pogłębisz swoją wiedzę na temat dawnej stolicy Polski. Poznasz również wiele ciekawych faktów o przedstawionych na poniższym kolażu artystach. 
+	</p>
+	
+	<div class="map-collage">
+		<img src="img/collage2.jpg" usemap="#collage" class="collage">
+			<map name="collage">
+				<area alt="Stwosz" title="Stwosz" href="stwosz.html" coords="104,401,130,379,155,369,191,369,213,376,236,389,257,415,258,438,260,457,265,474,277,489,279,511,294,528,325,522,374,525,420,542,457,545,472,562,476,593,472,640,474,654,431,672,406,689,387,693,362,706,391,728,377,737,345,749,299,749,264,749,213,725,189,708,162,694,130,703,106,718,89,739,87,767,74,783,67,813,80,830,62,850,33,852,7,839,-1,771,-1,696,72,615,114,583,128,562,91,550,72,513,72,457,80,444,79,430,79,435,79,430,80,444,91,416" shape="poly">
+				<area alt="Kantor" title="Kantor" href="kantor.html" coords="0,900,64,873,83,839,88,785,98,746,122,717,159,703,188,717,210,737,226,762,215,802,210,835,198,880,197,905,222,920,230,944,223,1078,131,1078,2,1078" shape="poly">
+				<area alt="Conrad" title="Conrad" href="conrad.html" coords="420,1078,411,1022,430,947,467,895,498,847,479,801,477,772,501,744,504,700,535,657,577,647,606,659,630,659,655,686,664,728,664,766,686,781,691,805,686,849,779,1042,755,1078,584,1078" shape="poly">
+				<area alt="Szymborska" title="Szymborska" href="szymborska.html" coords="856,1078,820,1020,844,959,895,993,973,966,937,871,983,788,1064,800,1134,856,1083,964,1174,966,1188,1076,954,1078" shape="poly">
+				<area alt="Tischner" title="Tischner" href="tischner.html" coords="1234,1074,1239,1036,1397,982,1424,919,1391,870,1310,860,1398,799,1407,711,1468,672,1537,668,1580,704,1620,726,1680,718,1705,736,1627,801,1646,833,1627,894,1593,929,1627,963,1715,985,1782,1007,1795,1074" shape="poly">
+			</map>
+	</div>
+	
+    <!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/jquery.rwdImageMaps.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script>
+	$(document).ready(function(e) {
+		$('img[usemap]').rwdImageMaps();
+    });
+	</script>
+	<script type="text/javascript">
+		$('.collapse').on('show.bs.collapse', function () {
+		  $('.collapse.in').each(function(){
+			  $(this).collapse('hide');
+		  });
+		});	
+	</script>
+	<script>
+		$(document).click(function(e) {
+		if (!$(e.target).is('.panel-body')) {
+			$('.collapse').collapse('hide');	    
+		}
+	});
+	</script>
+	
+
+
+</body>
+</html>
+
